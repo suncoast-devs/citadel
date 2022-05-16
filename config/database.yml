@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  database: citadel
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: citadel_test

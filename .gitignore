@@ -1,0 +1,12 @@
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+/public/assets
+/config/master.key
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
