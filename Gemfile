@@ -13,6 +13,7 @@ gem 'puma'
 gem 'importmap-rails'
 gem 'propshaft'
 gem 'tailwindcss-rails'
+gem 'view_component'
 
 group :development, :test do
   gem 'debug'

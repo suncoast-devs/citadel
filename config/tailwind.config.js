@@ -4,7 +4,8 @@ module.exports = {
   content: [
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/components/**/*.{erb,html}',
+    './app/views/**/*.{erb,html}',
   ],
   theme: {
     extend: {
@@ -17,5 +18,5 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-  ]
+  ],
 }

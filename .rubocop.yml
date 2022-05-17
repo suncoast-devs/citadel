@@ -2,14 +2,18 @@ require:
   - rubocop-performance
   - rubocop-rails
 
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+
 AllCops:
   TargetRubyVersion: 3.0
   TargetRailsVersion: 7.0
   NewCops: enable
   Exclude:
-    - "**/db/migrate/*"
-    - "db/schema.rb"
-    - "**/Gemfile.lock"
+    - '**/db/migrate/*'
+    - 'db/schema.rb'
+    - '**/Gemfile.lock'
+    - 'node_modules/**/*'
 
 Style/Documentation:
   Enabled: false
