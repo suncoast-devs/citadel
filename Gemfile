@@ -17,6 +17,7 @@ gem 'view_component'
 
 group :development, :test do
   gem 'debug'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
