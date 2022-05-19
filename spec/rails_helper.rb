@@ -7,6 +7,9 @@ require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:default, { uid: '42' })
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e

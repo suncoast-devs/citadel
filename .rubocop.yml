@@ -15,5 +15,8 @@ AllCops:
     - '**/Gemfile.lock'
     - 'node_modules/**/*'
 
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false

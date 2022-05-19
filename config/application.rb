@@ -18,6 +18,6 @@ module Citadel
     config.load_defaults 7.0
     config.time_zone = 'Eastern Time (US & Canada)'
     config.generators.helper = false
-    config.generators.system_tests = nil
+    config.generators.assets = false
   end
 end

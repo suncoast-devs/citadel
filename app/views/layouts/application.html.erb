@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'tailwind', 'inter-font' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/fb585f8618.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'tailwind' %>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_importmap_tags %>
   </head>
   <body class="h-full">
-    <%= render LayoutComponent.new do %>
+    <%= render LayoutComponent.new(title: yield(:page_title)) do %>
       <%= yield %>
     <% end %>
   </body>

@@ -15,7 +15,13 @@ gem 'propshaft'
 gem 'tailwindcss-rails'
 gem 'view_component'
 
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+
 group :development, :test do
+  gem 'capybara'
   gem 'debug'
   gem 'rspec-rails'
   gem 'rubocop'

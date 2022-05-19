@@ -1,0 +1,13 @@
+<div class="relative p-2 <%= [bg_color_class, text_color_class].join(' ') %>">
+  <div class="flex items-center">
+    <div class="mr-2">
+      <i class="fa-duotone <%= [icon_class, icon_size_class].join(' ') %>"></i>
+    </div>
+    <div>
+      <h4 class="font-bold"><%= title %></h4>
+      <% if body.present? %>
+        <p class="text-sm opacity-60"><%= body %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
