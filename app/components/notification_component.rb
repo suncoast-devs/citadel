@@ -3,7 +3,7 @@
 class NotificationComponent < ViewComponent::Base
   def initialize(type:, data:)
     super
-    @type = type
+    @type = type.to_sym
     @data = prepare_data(data)
   end
 
@@ -17,7 +17,7 @@ class NotificationComponent < ViewComponent::Base
 
   def bg_color_class
     case @type
-    when 'notice'
+    when :notice
       'bg-green-200'
     when 'alert'
       'bg-red-200'
@@ -28,9 +28,9 @@ class NotificationComponent < ViewComponent::Base
 
   def text_color_class
     case @type
-    when 'notice'
+    when :notice
       'text-green-800'
-    when 'alert'
+    when :alert
       'text-red-800'
     else
       'text-yellow-800'
@@ -39,9 +39,9 @@ class NotificationComponent < ViewComponent::Base
 
   def icon_class
     case @type
-    when 'notice'
+    when :notice
       'fa-circle-check'
-    when 'alert'
+    when :alert
       'fa-circle-radiation'
     else
       'fa-okay'

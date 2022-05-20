@@ -1,6 +1,13 @@
-<% content_for :page_title, 'Sign In' %>
+<%= form_tag '/auth/google_oauth2' do %>
+  <button>
+    <i class="fa-brands fa-google"></i>
+    Sign in with Google
+  </button>
+<% end %>
 
-<div>
-  <h1 class="text-4xl font-bold">Sessions#new</h1>
-  <p>Find me in app/views/sessions/new.html.erb</p>
-</div>
+<%= form_tag '/auth/github' do %>
+  <button>
+    <i class="fa-brands fa-github-alt"></i>
+    Sign in with GitHub
+  </button>
+<% end %>

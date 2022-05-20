@@ -1,0 +1,7 @@
+en:
+  dashboard:
+    index:
+      title: Dashboard
+  sessions:
+    new:
+      title: Sign In

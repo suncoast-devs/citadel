@@ -2,13 +2,12 @@
 
 class ApplicationController < ActionController::Base
   def authenticate!
-    unless signed_in?
-      redirect_to new_session_path,
-                  alert: {
-                    title: 'Authentication Required',
-                    body: 'You must be signed in before accessing that page.',
-                  }
-    end
+    return if signed_in?
+    redirect_to new_session_path,
+                alert: {
+                  title: 'Authentication Required',
+                  body: 'You must be signed in before accessing that page.',
+                }
   end
 
   def current_user

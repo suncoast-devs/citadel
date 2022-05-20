@@ -17,7 +17,9 @@ module Citadel
   class Application < Rails::Application
     config.load_defaults 7.0
     config.time_zone = 'Eastern Time (US & Canada)'
-    config.generators.helper = false
-    config.generators.assets = false
+    config.generators do |g|
+      g.helper = false
+      g.assets = false
+    end
   end
 end

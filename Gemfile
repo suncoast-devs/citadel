@@ -23,6 +23,8 @@ gem 'omniauth-rails_csrf_protection'
 group :development, :test do
   gem 'capybara'
   gem 'debug'
+  gem 'fabrication'
+  gem 'faker'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance', require: false

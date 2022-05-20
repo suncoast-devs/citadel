@@ -7,6 +7,6 @@ class LayoutComponent < ViewComponent::Base
   end
 
   def before_render
-    @title = controller_name.humanize if @title.blank?
+    @title = t("#{controller_name}.#{action_name}.title") if @title.blank?
   end
 end

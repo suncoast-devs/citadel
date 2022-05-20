@@ -1,7 +1,6 @@
 class CreateProfiles < ActiveRecord::Migration[7.0]
   def change
     create_table :profiles do |t|
-      t.references :user, null: false, foreign_key: true
       t.string :given_name
       t.string :family_name
       t.string :email_address
@@ -18,6 +17,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.string :pronouns
       t.string :shirt_size
       t.string :medical_note
+      t.boolean :inversed_full_name, default: true, null: false
 
       t.timestamps
     end
