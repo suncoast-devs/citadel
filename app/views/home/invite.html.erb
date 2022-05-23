@@ -1,13 +1,13 @@
-<% title 'Sign In' %>
+<p>Welcome. Now choose an authentication provider.</p>
 
-<%= form_tag '/auth/google_oauth2' do %>
+<%= form_tag "/auth/google_oauth2?invite=#{@invitation.token}" do %>
   <button>
     <i class="fa-brands fa-google"></i>
     Sign in with Google
   </button>
 <% end %>
 
-<%= form_tag '/auth/github' do %>
+<%= form_tag "/auth/github?invite=#{@invitation.token}" do %>
   <button>
     <i class="fa-brands fa-github-alt"></i>
     Sign in with GitHub

@@ -13,5 +13,8 @@ Rails
     get 'auth/failure', to: redirect('/')
     match 'auth/:provider/callback', to: 'sessions#create', via: %i[get post]
 
-    root 'dashboard#index'
+    get 'invite/:token', to: 'home#invite', as: :invite
+    get 'dash', to: 'dashboard#index', as: :dashboard
+
+    root 'home#index'
   end

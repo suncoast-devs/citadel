@@ -2,7 +2,13 @@
 
 Fabricator(:user) do
   profile
-  authorizations(count: 1)
-  role :user
   status :active
+  role :user
+  authorizations(count: 1)
+end
+
+Fabricator(:pending_user, from: 'User') do
+  profile
+  status :pending
+  role :user
 end

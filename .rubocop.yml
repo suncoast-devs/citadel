@@ -15,6 +15,9 @@ AllCops:
     - '**/Gemfile.lock'
     - 'node_modules/**/*'
 
+Metrics/BlockLength:
+  IgnoredMethods: ['describe']
+
 Rails/I18nLocaleTexts:
   Enabled: false
 

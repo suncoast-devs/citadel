@@ -7,7 +7,9 @@
         <% end %>
         <div>
           <% if helpers.signed_in? %>
-            Profile Stuff
+            <%= form_tag session_path, method: 'DELETE' do %>
+              <button>Sign Out</button>
+            <% end %>
           <% else %>
             <%= link_to 'Sign In', new_session_path %>
           <% end %>

@@ -1,7 +1,16 @@
 en:
-  dashboard:
-    index:
-      title: Dashboard
-  sessions:
-    new:
-      title: Sign In
+  authentication:
+    failed:
+      title: 'Authentication Failed'
+      body: 'You must be invited before signing in.'
+    required:
+      title: 'Authentication Required'
+      body: 'You must be signed in before accessing that page.'
+    invalid_token:
+      title: 'Invalid Token'
+      body: 'This is invitation is not valid; contact an administrator.'
+    signed_in:
+      title: 'Welcome, %{name}!'
+      body: "It's good to see you."
+    signed_out:
+      title: 'Goodbye!'
