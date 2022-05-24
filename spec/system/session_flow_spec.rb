@@ -39,6 +39,7 @@ RSpec.describe 'Session Flow', type: :system do
 
     invitation.reload
     expect(invitation.user.authorizations).not_to be_empty
+    expect(invitation.user).to be_active
     expect(invitation).to be_redeemed
   end
 end

@@ -1,4 +1,7 @@
 en:
+  profile:
+    updated:
+      title: 'Profile updated successfully'
   authentication:
     failed:
       title: 'Authentication Failed'

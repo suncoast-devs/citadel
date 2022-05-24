@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  default_form_builder Citadel::FormBuilder
+
   def authenticate!
     return if signed_in?
     redirect_to :new_session, alert: t('authentication.required')

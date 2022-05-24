@@ -6,7 +6,7 @@ class Invitation < ApplicationRecord
   after_initialize :generate_token, if: :new_record?
 
   def generate_token
-    self.token = SecureRandom.hex(8)
+    self.token = SecureRandom.hex(4)
   end
 
   def redeemed?

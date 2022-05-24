@@ -19,9 +19,7 @@ class NotificationComponent < ViewComponent::Base
     case @type
     when :notice
       'bg-green-200'
-    when 'alert'
-      'bg-red-200'
-    else
+    when :alert
       'bg-yellow-200'
     end
   end
@@ -32,8 +30,6 @@ class NotificationComponent < ViewComponent::Base
       'text-green-800'
     when :alert
       'text-red-800'
-    else
-      'text-yellow-800'
     end
   end
 
@@ -43,8 +39,6 @@ class NotificationComponent < ViewComponent::Base
       'fa-circle-check'
     when :alert
       'fa-circle-radiation'
-    else
-      'fa-okay'
     end
   end
 

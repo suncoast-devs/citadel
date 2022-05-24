@@ -1,0 +1,14 @@
+<%= title 'Update your profile' %>
+
+<%= form_for @profile do |f| %>
+  <%= f.section "Basic Info" do %>
+    <div class="grid md:grid-cols-2 gap-x-2">
+      <%= f.text_field :given_name %>
+      <%= f.text_field :family_name %>
+      <div class="col-span-full">
+        <%= f.text_field :email_address %>
+      </div>
+    </div>
+  <% end %>
+  <%= f.actions { f.submit } %>
+<% end %>

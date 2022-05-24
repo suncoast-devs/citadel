@@ -7,6 +7,6 @@ class HomeController < ApplicationController
 
   def invite
     @invitation = Invitation.find_by(token: params[:token])
-    redirect_to :root, alert: t('authentication.invalid_token') if @invitation&.redeemed?
+    redirect_to :root, alert: t('authentication.invalid_token') if @invitation&.redeemed? || @invitation.blank?
   end
 end
